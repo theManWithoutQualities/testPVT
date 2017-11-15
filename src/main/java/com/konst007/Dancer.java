@@ -29,4 +29,11 @@ public class Dancer {
             position-=distance;
 
     }
+
+    public void moveBack() {
+
+        position=0;
+
+    }
+
 }

@@ -18,4 +18,12 @@ public class DancerTest extends TestCase {
 
     }
 
+    public void testMoveBack() throws Exception {
+
+        dancer.setPosition(5);
+        dancer.moveBack();
+        assertEquals(0, dancer.getPosition());
+
+    }
+
 }
