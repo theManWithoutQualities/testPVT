@@ -43,6 +43,7 @@ public class CalculationImplTest extends TestCase {
     public void testCalculateSteps() throws Exception {
 
         assertEquals(4, calculation.calculateSteps(2, 0, 7));
+        assertEquals(-1, calculation.calculateSteps(2, 0, 2));
 
     }
 

@@ -37,7 +37,14 @@ public class CalculationImpl implements Calculation{
 
         int ind=0;
         int sum=0;
+        int[] flags = new int[input.length];
         while (!isEndOfDance(input[ind], dancer)){
+
+            if(flags[ind]==1)
+                return -1;
+            if(dancer.getPosition()==0)
+                flags[ind]=1;
+
             if(isPossibleMove(input[ind], dancer)){
                 sum+=input[ind];
                 dancer.move(input[ind]);
