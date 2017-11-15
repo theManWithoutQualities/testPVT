@@ -29,7 +29,28 @@ public class CalculationImpl implements Calculation{
 
     public int calculateSteps(int... input) {
 
-        return 0;
+        Stage stage = new Stage();
+        stage.setLength(calculateStageLength(input));
+
+        Dancer dancer = new Dancer();
+        dancer.setStage(stage);
+
+        int ind=0;
+        int sum=0;
+        while (!isEndOfDance(input[ind], dancer)){
+            if(isPossibleMove(input[ind], dancer)){
+                sum+=input[ind];
+                dancer.move(input[ind]);
+                ind=(ind+1)%input.length;
+            }
+            else{
+                sum+=dancer.getPosition();
+                dancer.moveBack();
+            }
+        }
+
+
+        return sum;
 
     }
 
