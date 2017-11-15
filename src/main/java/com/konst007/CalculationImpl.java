@@ -18,6 +18,15 @@ public class CalculationImpl implements Calculation{
 
     }
 
+    public boolean isEndOfDance(int distance, Dancer dancer) {
+
+        if((!isPossibleMove(distance, dancer))&&(dancer.getPosition()==0))
+            return true;
+        else
+            return false;
+
+    }
+
     public int calculateSteps(int... input) {
 
         return 0;

@@ -27,6 +27,19 @@ public class CalculationImplTest extends TestCase {
 
     }
 
+    public void testIsEndOfDance() throws Exception {
+
+        Stage stage = new Stage();
+        stage.setLength(7);
+        Dancer dancer = new Dancer();
+        dancer.setStage(stage);
+        dancer.setPosition(0);
+
+        assertEquals(true, calculation.isEndOfDance(3, dancer));
+        assertEquals(false, calculation.isEndOfDance(2, dancer));
+
+    }
+
     public void testCalculateSteps() throws Exception {
     }
 
