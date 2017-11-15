@@ -3,6 +3,15 @@ package com.konst007;
 public class Dancer {
 
     private int position;
+    private Stage stage;
+
+    public Stage getStage() {
+        return stage;
+    }
+
+    public void setStage(Stage stage) {
+        this.stage = stage;
+    }
 
     public int getPosition() {
         return position;
